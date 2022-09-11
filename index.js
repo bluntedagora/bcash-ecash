@@ -378,7 +378,7 @@ console.log("Loading...");
     const tx = new bcash.MTX();
 
     // Instantiate opreturn
-    const opreturn = new bcash.Script().pushSym('return').pushString('Bitcoin is not money');
+    const opreturn = new bcash.Script().pushSym('return').pushString('Bitcoin is not money').compile();
 
     // const destinationAddress = keyringArray[1].getAddress();    // Sets receiving address at index 1 as destinationAddress
     tx.addOutput(opreturn, 0);
